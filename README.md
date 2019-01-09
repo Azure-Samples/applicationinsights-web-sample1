@@ -1,57 +1,30 @@
 # Project Name
 
-(short, 1-3 sentenced, description of the project)
+This project shows how to load application insights javascript sdk (New BETA version) from CDN.
+Version link: https://github.com/Microsoft/ApplicationInsights-JS/blob/master/AISKU/README.md
+
 
 ## Features
 
 This project framework provides the following features:
 
-* Feature 1
-* Feature 2
-* ...
+* Use code snippet at top of your html page. This loads the Application insights SDK asynchronously. You can use the apis available in the SDK to instrument your code.
 
 ## Getting Started
 
 ### Prerequisites
 
-(ideally very short, if any)
+- Node (to run the demo code)
 
-- OS
-- Library version
-- ...
 
 ### Installation
 
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
+- npm install
 
 ### Quickstart
-(Add steps to get up and running quickly)
+To run on localhost:
 
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+1. Download and install nodejs
+2. Run 'node web_server.js'
+3. Load http://localhost:8080/test.html
 
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
