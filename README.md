@@ -13,7 +13,7 @@
 	ms.topic="article"
 	ms.date="01/10/2019"/>
 
-# Microsoft Application Insights JavaScript SDK V2 Sample
+# Microsoft Application Insights JavaScript SDK V2 (Beta) Sample
 
 This project shows how to load application insights javascript sdk (New BETA version) from CDN.
 Version link: https://github.com/Microsoft/ApplicationInsights-JS/blob/master/AISKU/README.md
