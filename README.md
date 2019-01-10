@@ -1,5 +1,5 @@
 	<properties
-	pageTitle="Application Insights SDK JavaScript API Sample"
+	pageTitle="Application Insights JavaScript SDK V2-Beta API Sample"
 	description="Sample"
 	services="application insights javascript v2"
     documentationCenter=".net"
