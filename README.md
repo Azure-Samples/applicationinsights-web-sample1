@@ -1,3 +1,18 @@
+	<properties
+	pageTitle="Application Insights SDK JavaScript API Sample"
+	description="Sample"
+	services="application insights javascript v2"
+    documentationCenter=".net"
+	authors="piyalij"/>
+
+<tags
+	ms.service="application-insights"
+	ms.workload="tbd"
+	ms.tgt_pltfrm="ibiza"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.date="01/10/2019"/>
+
 # Project Name
 
 This project shows how to load application insights javascript sdk (New BETA version) from CDN.
