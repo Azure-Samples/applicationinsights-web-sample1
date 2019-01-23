@@ -29,8 +29,8 @@
             baseType: "PageviewData",
             baseData: { 
                 name: "Test Page",
-                url: "http://localhost:8080/testlightsku.html"
-            } // please refer to types/*.d.ts for full set of properties supported here
+                uri: "http://localhost:8080/testlightsku.html"
+            } // please refer to types/*.d.ts exported in library for full set of properties supported here
         };
 
         appInsights.core.track(pageView); // track a page view
@@ -39,7 +39,7 @@
 
     function onCustomEventClick() {
         var eventItem = {
-            "name": "Microsoft.ApplicationInsights.INSTRUMENTATION_KEY.Event",
+            "name": "Microsoft.ApplicationInsights.INSTRUMENTATION_KEY_NO_SEPARATOR.Event",
             "timestamp": "2018-07-19T02:17:12.993Z",
             "ext": {},
             "tags": [],
