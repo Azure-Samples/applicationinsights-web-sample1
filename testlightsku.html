@@ -1,0 +1,102 @@
+<html>
+    <!-- Light SKU CDN. Use this SKU if you are running in environment with no DOM access.
+        SKU functionlity is limited. It does not have curated apis for supported schemas 
+        in Application Insights and auto collection of data. -->
+    <script type="text/javascript" src="https://az416426.vo.msecnd.net/next/aib.1.min.js"></script>
+    <head>
+        <div>
+            Light SKU test
+        </div>
+        </head>
+    <br/>
+    <script type="text/javascript">
+        var appInsights = new Microsoft.ApplicationInsights({instrumentationKey: "INSTRUMENTATION_KEY"});
+    </script>
+<script>
+    function onPageViewClick() {
+
+        var pageView = {
+            name: "Microsoft.ApplicationInsights.INSTRUMENTATION_KEY.Pageview",
+            ext: {
+                "user": { "id": "test" }
+            }, 
+            tags: [ { "device.id": "AABA40BC-EB0D-44A7-96F5-ED2103E47AE9"} ],
+            data: {
+                "custom data": {
+                    "data1": "value1"
+                }
+            },
+            baseType: "PageviewData",
+            baseData: { 
+                name: "Test Page",
+                url: "http://localhost:8080/testlightsku.html"
+            } // please refer to types/*.d.ts for full set of properties supported here
+        };
+
+        appInsights.core.track(pageView); // track a page view
+        appInsights.flush(); // to see data sent immediately
+    }
+
+    function onCustomEventClick() {
+        var eventItem = {
+            "name": "Microsoft.ApplicationInsights.INSTRUMENTATION_KEY.Event",
+            "timestamp": "2018-07-19T02:17:12.993Z",
+            "ext": {},
+            "tags": [],
+            "data": {
+                "cProp1Key": "cProp1Val",
+                "cProp2Key": "cProp2Val",
+                "cMeasurement1Key": 4.8
+            },
+            baseType:"EventData", // defined types
+            baseData: {
+                "name": "testing",
+                "properties": {
+                    "data1": "value1"
+                },
+                "measurements": {
+                    "data1": 2000
+                }
+            }
+        };
+
+        appInsights.core.track(eventItem);
+        appInsights.flush();
+    }
+
+    function trackUnhandledException() {
+
+        var exceptionItem = {
+            "name": "Microsoft.ApplicationInsights.8e68dc94-34d1-4894-8697-be2ba6282b5b.Event",
+            "timestamp": "2018-07-19T02:17:12.993Z",
+            "ext": {},
+            "tags": [],
+            "data": {
+                "cProp1Key": "cProp1Val",
+                "cProp2Key": "cProp2Val",
+                "cMeasurement1Key": 4.8
+            },
+            baseType:"ExceptionData", // defined types
+            baseData: {
+            name: "Exception Item",
+            error:  new Error("Test exception"),
+                properties: {
+                    "Test": "Scenario foo"
+                },
+                "measurements": {
+                    "data1": 2000
+                }
+            }               
+        };
+
+        appInsights.core.track(exceptionItem);
+        appInsights.flush();
+    }
+
+</script>
+<body>
+    <button style="margin:10px" onclick="onPageViewClick()">Page View</button>
+    <button style="margin:10px" onclick="onCustomEventClick()">Custom Event</button>
+    <button style="margin:10px" onclick="trackUnhandledException()">Track exception</button>
+</body>
+</html>
