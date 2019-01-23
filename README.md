@@ -36,4 +36,5 @@ To run on localhost:
 
 1. Download and install nodejs
 2. Run 'node web_server.js'
-3. Load http://localhost:8080/test.html
+3. Load http://localhost:8080/test.html for sample usage of Application Insights Beta SDK 2.x (full sku)
+4. Load http://localhost:8080/testlightsku.html for sample usage of Application Insights Beta SDK 2.x (lightweight sku). Use this SKU if you are running in environment with no DOM access such as web worker. This SKU functionlity is limited. It does not have curated apis for supported schemas in Application Insights and auto collection of data.
