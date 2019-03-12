@@ -2,7 +2,7 @@
     <!-- Light SKU CDN. Use this SKU if you are running in environment with no DOM access.
         SKU functionlity is limited. It does not have curated apis for supported schemas 
         in Application Insights and auto collection of data. -->
-    <script type="text/javascript" src="https://az416426.vo.msecnd.net/next/aib.1.min.js"></script>
+    <script type="text/javascript" src="https://az416426.vo.msecnd.net/next/aib.2.min.js"></script>
     <head>
         <div>
             Light SKU test
@@ -10,13 +10,13 @@
         </head>
     <br/>
     <script type="text/javascript">
-        var appInsights = new Microsoft.ApplicationInsights({instrumentationKey: "INSTRUMENTATION_KEY"});
+        var appInsights = new Microsoft.ApplicationInsights.ApplicationInsights({instrumentationKey: "INSTRUMENTATION_KEY"});
     </script>
 <script>
     function onPageViewClick() {
 
         var pageView = {
-            name: "Microsoft.ApplicationInsights.INSTRUMENTATION_KEY.Pageview",
+            name: "Microsoft.ApplicationInsights.AABA40BC-EB0D-44A7-96F5-ED2103E47AE9.Pageview",
             ext: {
                 "user": { "id": "test" }
             }, 
